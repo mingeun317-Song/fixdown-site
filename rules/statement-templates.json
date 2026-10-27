@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "templates": [
+    {
+      "id": "shinhan-check-v1",
+      "issuer": "신한카드",
+      "label": "신한카드(체크)",
+      "headerMatch": ["거래일", "가맹점명", "금액", "매입구분"],
+      "columns": {
+        "date": "거래일",
+        "merchant": "가맹점명",
+        "amount": "금액",
+        "installment": "이용구분",
+        "currency": "거래통화",
+        "foreignAmount": "해외이용금액"
+      },
+      "dateFormats": ["YYYY.MM.DD HH:mm"],
+      "downloadGuide": [
+        "신한카드 홈페이지에 로그인해요",
+        "마이 → 카드이용내역으로 가요",
+        "기간을 정하고(3개월 이상 추천) [엑셀저장]을 눌러요"
+      ],
+      "sourceSample": "fixtures/statements/README.md [확인]. 해외 결제: 금액 = 원화, 해외이용금액 = 외화, 이용구분 '해외일시불' [확인 2026-10-17, D-164]. installment(이용구분 '할부 N개월')는 [추정](실제 할부 줄 없음)"
+    }
+  ]
+}
